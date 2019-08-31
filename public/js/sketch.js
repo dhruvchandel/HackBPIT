@@ -23,9 +23,24 @@ function setup() {
   // Hide the video element, and just show the canvas
   video.hide();
 }
-
+var heat;
+var can;
 function modelReady() {
   select('#status').html('Model Loaded');
+  var h = document.getElementById("heat");
+  can = document.createElement("canvas");
+  can.style.position = "absolute";
+  can.style.left = "150px";
+  can.style.top = "380px";
+  can.style.width = "476px";
+  can.style.height = "294px";
+  can.style.opacity = "0.5" ;
+  setTimeout(function(){
+    h.appendChild(can);
+  },200);
+
+  heat = simpleheat(can);
+  heat.radius(5,1);
 }
 
 function draw() {
@@ -67,7 +82,6 @@ function drawKeypoints()  {
       l3=true;
       l2=false;
       l1=false;
-    
      
     }
     if(poses[0].pose.leftWrist.y < (poses[0].pose.leftShoulder.y-30) && poses[0].pose.rightWrist.y < (poses[0].pose.rightShoulder.y-30) && l3==true){
@@ -76,7 +90,28 @@ function drawKeypoints()  {
       l3=false;
       
       cycle++;
-      
+      if(cycle==1){
+        heat.gradient({1: 'blue', 0.45: 'lime', 0.64: 'red'});
+        heat.add([130,38,5]);
+        heat.add([160,38,5]);
+        heat.draw(0.05);
+      }
+      if(cycle==2){
+        heat.clear();
+        heat.gradient({0.65: 'blue', 0.65: 'lime', 0.65: 'red'});
+        heat.add([130,38,5]);
+        heat.add([160,38,5]);
+        heat.draw(0.05);
+      }
+
+      if(cycle==5){
+        can.style.top = "430px";
+        heat.clear();
+        heat.gradient({0.65: 'blue', 1: 'lime', 0.65: 'red'});
+        heat.add([130,38,5]);
+        heat.add([160,38,5]);
+        heat.draw(0.05);
+      }
       
     }
 
