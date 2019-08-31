@@ -108,3 +108,5 @@ canvas{
   visibility: hidden;
 }
 
+.can{position: absolute; top: 380px; left: 150px;opacity: 0.5;}
+
