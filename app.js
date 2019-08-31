@@ -37,5 +37,14 @@ res.send(name);
 
 });
 
+app.get("/camera",(req,res)=>{
+    res.sendFile(path.join(__dirname ,'public','camera.html'));
+});
+app.get("/results",(req,res)=>{
+    res.sendFile(path.join(__dirname ,'public','lb.html'));
+});
+app.get("/ppt",(req,res)=>{
+    res.sendFile(path.join(__dirname ,'public','ppt.html'));
+});
 
 app.listen(port);
