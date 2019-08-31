@@ -43,7 +43,19 @@ h1 span{
 
 .counter-flex{
   position: absolute;
-  top:20vh;
+  top:0;
+  left: 60vw;
+  max-width:30vw;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.counter-flex1{
+  position: absolute;
+  margin-left: 0px;
+  top:10vh;
   width:50vw;
   height: 40vh;
   display: flex;
@@ -54,13 +66,16 @@ h1 span{
 
 canvas{
   position: absolute;
-  top:20vh;
-  right: 10vw;
+  padding :0px;
+  top:30vh;
+  right: 5vw;
   box-shadow: 0 0 20px #000;
 }
 
 #counter{
-  font-size: 50px !important;
+  padding-top:15vh;
+  margin-left: 3vw;
+  font-size: 35px !important;
   font-weight: 900;
   color: #777;
 }
@@ -70,7 +85,9 @@ canvas{
 }
 
 img{
-  margin-top:10vh;
+  margin-top: 5vh;
+  margin-left: 50px;
+  padding: 0px;
   box-shadow: 0 0 20px #000;
 }
 

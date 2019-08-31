@@ -9,7 +9,7 @@ var prev=0;
 var saved = false;
 
 function setup() {
-  createCanvas(640, 480);
+  createCanvas(620, 480);
   video = createCapture(VIDEO);
   video.size(width, height);
 
