@@ -24,10 +24,11 @@ function setup() {
   video.hide();
 }
 var heat;
+var can;
 function modelReady() {
   select('#status').html('Model Loaded');
   var h = document.getElementById("heat");
-  var can = document.createElement("canvas");
+  can = document.createElement("canvas");
   can.style.position = "absolute";
   can.style.left = "150px";
   can.style.top = "380px";
@@ -104,6 +105,7 @@ function drawKeypoints()  {
       }
 
       if(cycle==5){
+        can.style.top = "430px";
         heat.clear();
         heat.gradient({0.65: 'blue', 1: 'lime', 0.65: 'red'});
         heat.add([130,38,5]);
