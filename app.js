@@ -46,5 +46,10 @@ app.get("/results",(req,res)=>{
 app.get("/ppt",(req,res)=>{
     res.sendFile(path.join(__dirname ,'public','ppt.html'));
 });
-
+app.get("/camera2",(req,res)=>{
+    res.sendFile(path.join(__dirname ,'public','camera2.html'));
+});
+app.get("/index1",(req,res)=>{
+    res.sendFile(path.join(__dirname ,'public','index1.html'));
+});
 app.listen(port);

@@ -42,7 +42,7 @@ function modelReady() {
   },200);
 
   heat = simpleheat(can);
-  heat.radius(5,1);
+  heat.radius(4,3);
 }
 
 function draw() {
@@ -94,15 +94,19 @@ function drawKeypoints()  {
       cycle++;
       if(cycle==1){
         heat.gradient({1: 'blue', 0.45: 'lime', 0.64: 'red'});
-        heat.add([132,65,5]);
-        heat.add([158,65,5]);
+        heat.add([135,65,5]);
+        heat.add([159,65,5]);
+        heat.add([157,60,5]);
+        heat.add([135,60,5]);
         heat.draw(0.05);
       }
       if(cycle==2){
         heat.clear();
         heat.gradient({0.65: 'blue', 0.65: 'lime', 0.65: 'red'});
-        heat.add([132,65,5]);
-        heat.add([158,65,5]);
+        heat.add([135,65,5]);
+        heat.add([159,65,5]);
+        heat.add([157,60,5]);
+        heat.add([135,60,5]);
         heat.draw(0.05);
       }
 
@@ -110,8 +114,10 @@ function drawKeypoints()  {
         can.style.top = "430px";
         heat.clear();
         heat.gradient({0.65: 'blue', 1: 'lime', 0.65: 'red'});
-        heat.add([132,65,5]);
-        heat.add([158,65,5]);
+        heat.add([135,65,5]);
+        heat.add([159,65,5]);
+        heat.add([157,60,5]);
+        heat.add([135,60,5]);
         heat.draw(0.05);
       }
       
