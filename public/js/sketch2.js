@@ -110,8 +110,8 @@ function drawKeypoints()  {
         can.style.top = "430px";
         heat.clear();
         heat.gradient({0.65: 'blue', 1: 'lime', 0.65: 'red'});
-        heat.add([130,38,5]);
-        heat.add([160,38,5]);
+        heat.add([132,65,5]);
+        heat.add([158,65,5]);
         heat.draw(0.05);
       }
       
